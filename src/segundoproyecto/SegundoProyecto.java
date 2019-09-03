@@ -8,13 +8,13 @@ import procedimientos.Numeros;
 
 public class SegundoProyecto {
     //Variables para moverse dentro de la matris
-   static int x,y,aux;
+    int x,y,aux;
    //instanci del objeto de la clase Numeros para usar los metodos
-  static Numeros l = new Numeros();
+   Numeros l = new Numeros();
   //llamada al metodo llenar para llenar la matriz
-       static int[][] matriz = l.llenar();  
+        int[][] matriz = l.llenar();  
    
-    public static void main(String[] args) {
+    public  void ejecutar() {
         Scanner s = new Scanner(System.in);
         int opt;
        boolean t = true;
@@ -49,7 +49,7 @@ public class SegundoProyecto {
       
       System.out.print("FELICIDADES GANASTE!!");
     }
-    static public void moverD(){
+     public void moverD(){
         if(y<matriz.length-1){
     int rob = matriz[x][y];
     matriz[x][y]=aux;
@@ -57,14 +57,14 @@ public class SegundoProyecto {
     matriz[x][y]=rob;
         }
     }
-   static public void moverA(){
+    public void moverA(){
        if(x<matriz.length-1){
     int rob = matriz[x][y];
     matriz[x][y]=aux;
     x++;
     matriz[x][y]=rob;
     }}
-   static public void moverI(){
+    public void moverI(){
        if(y>0){
     int rob = matriz[x][y];
     matriz[x][y]=aux;
@@ -72,7 +72,7 @@ public class SegundoProyecto {
     matriz[x][y]=rob;
     }
    }
-   static public void moverAR(){
+    public void moverAR(){
        if(x>0){
     int rob = matriz[x][y];
     matriz[x][y]=aux;
